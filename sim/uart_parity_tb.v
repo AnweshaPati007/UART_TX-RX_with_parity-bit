@@ -78,7 +78,7 @@ begin
     @(posedge clk);
     wr_uart = 1'b0;
 
-    $display("[%0t] Sent = %h", $time, data);
+    $display("[%0t] Sent = %h Parity error=%b", $time, data, parity_error);
 end
 endtask
 
@@ -92,7 +92,7 @@ begin
     @(posedge clk);
     rd_uart = 1'b0;
 
-    $display("[%0t] Received = %h", $time, r_data);
+    $display("[%0t] Received = %h",  $time, r_data);
 end
 endtask
 

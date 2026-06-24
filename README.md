@@ -19,32 +19,8 @@ A parameterised Universal Asynchronous Receiver Transmitter (UART) implemented i
 
 ### Top-Level Block Diagram
 
-> **Include overall UART architecture schematic here**
+<img width="3016" height="1172" alt="schematic" src="https://github.com/user-attachments/assets/35292cc2-2aad-4a71-978d-80e69f212ff6" />
 
-Insert:
-
-```text
-images/schematic.jpg
-```
-
-The diagram should show:
-
-- UART Top Module
-- Baud Rate Generator
-- UART Transmitter
-- UART Receiver
-- TX FIFO
-- RX FIFO
-- Parity Generator
-- Parity Checker
-
-Example:
-
-```markdown
-![UART Architecture](docs/images/uart_top_architecture.png)
-```
-
----
 
 ## Module Description
 
@@ -162,60 +138,11 @@ Checks:
 
 ---
 
-## Directory Structure
-
-```text
-UART_Controller/
-│
-├── rtl/
-│   ├── uart.v
-│   ├── uart_tx.v
-│   ├── uart_rx.v
-│   ├── timer_input.v
-│   ├── parity_generator.v
-│   └── parity_checker.v
-│
-├── tb/
-│   ├── uart_parity_tb.v
-│   └── uart_rx_error_detection_tb.v
-│
-├── docs/
-│   └── images/
-│       ├── uart_top_architecture.png
-│       ├── uart_tx_asmd.png
-│       ├── uart_rx_asmd.png
-│       ├── loopback_waveform.png
-│       └── parity_error_waveform.png
-│
-├── README.md
-└── LICENSE
-```
-
----
-
-## Simulation
-
-The design can be simulated using:
-
-- Vivado Simulator
-- ModelSim / QuestaSim
-- XSIM
-
-Example simulation flow:
-
-```tcl
-vlog rtl/*.v tb/*.v
-vsim uart_parity_tb
-run -all
-```
-
----
-
 ## Results
 
 - Successful UART transmission and reception verified.
 - Even and odd parity modes validated.
-- Parity errors correctly detected and flagged.
+- Parity errors are correctly detected and flagged.
 - FIFO buffering enabled reliable data transfer.
 
 ---
@@ -227,10 +154,3 @@ run -all
 - Implement hardware flow control (RTS/CTS).
 - Extend verification using SystemVerilog assertions and constrained-random testing.
 
----
-
-## Author
-
-**Your Name**
-
-Personal Project • May–June 2026

@@ -88,7 +88,7 @@ Supports:
 
 ### 6. Parity Checker (`parity_checker.v`)
 
-Verifies received parity bits and asserts an error flag upon mismatch.
+Verifies received parity bits and asserts an error flag upon a mismatch.
 
 ---
 
@@ -106,17 +106,12 @@ Checks:
 
 - Successful data transmission
 - Correct FIFO operation
-- Proper TX/RX synchronization
+- Proper TX/RX synchronisation
 
 #### Simulation Waveform
 
-> **Insert loopback waveform here**
+<img width="740" height="306" alt="Screenshot 2026-06-24 131118" src="https://github.com/user-attachments/assets/b21225d1-ebd5-41b0-884a-aeeb13bfa8c3" />
 
-```markdown
-![Loopback Waveform](docs/images/loopback_waveform.png)
-```
-
----
 
 ### 2. Parity Error Detection Verification
 
@@ -130,13 +125,8 @@ Checks:
 
 #### Simulation Waveform
 
-> **Insert parity error waveform here**
+<img width="740" height="230" alt="Screenshot 2026-06-24 131929" src="https://github.com/user-attachments/assets/0f8ce74f-631d-4bdb-8662-b6acd04e4218" />
 
-```markdown
-![Parity Error Waveform](docs/images/parity_error_waveform.png)
-```
-
----
 
 ## Results
 
@@ -144,13 +134,3 @@ Checks:
 - Even and odd parity modes validated.
 - Parity errors are correctly detected and flagged.
 - FIFO buffering enabled reliable data transfer.
-
----
-
-## Future Improvements
-
-- Support configurable data widths.
-- Add selectable baud-rate presets.
-- Implement hardware flow control (RTS/CTS).
-- Extend verification using SystemVerilog assertions and constrained-random testing.
-
